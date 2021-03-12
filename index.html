@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آرمون سافت</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.0.min.js" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/mustache.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      {{ logo }}
+      <a href="./">فارسی</a>
+      <a href="#en">English</a>
+      <a href="#ar">عربي</a>
+    </nav>
+
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      {{ buttonText }}
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">{{ modalTitle }}</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              {{# products }}
+              <li>{{ name }} <span>({{ price }})</span></li>
+              {{/ products }}
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              {{ modalItems.close }}
+            </button>
+            <button type="button" class="btn btn-primary">
+              {{ modalItems.submit }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills">
+      {{# resume.skills }}
+      <div>
+        <div style="width: {{ score }}%; background-color: {{ color }};">
+          {{ name }}
+        </div>
+      </div>
+      {{/ resume.skills }}
+    </div>
+
+    <footer>
+      <ul>
+        {{# social }}
+        <a href="{{ link }}">{{ name }}</a>
+        {{/ social }}
+      </ul>
+    </footer>
+  </body>
+</html>

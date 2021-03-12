@@ -1,0 +1,1 @@
+sass --watch --style=compressed .\assets\sass\main.sass:.\assets\css\main.css

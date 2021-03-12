@@ -1,0 +1,24 @@
+{
+  "skills": [
+    {
+      "name": "Photoshop",
+      "score": 80,
+      "color": "#40D0FB"
+    },
+    {
+      "name": "Illustrator",
+      "score": 90,
+      "color": "#ffaa4d"
+    },
+    {
+      "name": "Adobe XD",
+      "score": 85,
+      "color": "#d62598"
+    },
+    {
+      "name": "Figma",
+      "score": 87,
+      "color": "#409"
+    }
+  ]
+}
