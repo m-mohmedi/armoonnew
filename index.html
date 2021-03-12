@@ -15,81 +15,115 @@
     <script src="assets/js/main.js" defer></script>
   </head>
   <body>
-    <nav>
-      {{ logo }}
-      <a href="./">فارسی</a>
-      <a href="#en">English</a>
-      <a href="#ar">عربي</a>
-    </nav>
-
-    <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      {{ buttonText }}
-    </button>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">{{ modalTitle }}</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <ul>
-              {{# products }}
-              <li>{{ name }} <span>({{ price }})</span></li>
-              {{/ products }}
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              {{ modalItems.close }}
-            </button>
-            <button type="button" class="btn btn-primary">
-              {{ modalItems.submit }}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="skills">
-      {{# resume.skills }}
+    <nav class="top-navbar d-flex">
       <div>
-        <div style="width: {{ score }}%; background-color: {{ color }};">
-          {{ name }}
-        </div>
+        <a href="#">سوالات متداول</a>
+        <a href="#">همکاری با ما</a>
+        <a href="#">فارسی</a>
       </div>
-      {{/ resume.skills }}
-    </div>
 
-    <footer>
-      <ul>
-        {{# social }}
-        <a href="{{ link }}">{{ name }}</a>
-        {{/ social }}
-      </ul>
-    </footer>
+      <div class="ms-auto">
+        <a href="#">+98-9160360032</a>
+        <a href="#">armoon@gmail.com</a>
+      </div>
+    </nav>
+    <nav class="main-navbar d-flex">
+      <div class="logo">
+
+      </div>
+      <div class="menu-main d-flex">
+        <div class="menu-item p-3 current"><span>صفحه اصلی</span></div>
+        <div class="menu-item p-3 current"><span>راهکارها</span>
+          <div class="content">
+            <a href="#" class="nav-link">منوی آیتم</a>
+            <a href="#" class="nav-link">منوی آیتم</a>
+            <a href="#" class="nav-link">منوی آیتم</a>
+            <a href="#" class="nav-link">منوی آیتم</a>
+          </div>
+        </div>
+        <div class="menu-item p-3"><span>محصولات</span></div>
+        <div class="menu-item p-3"><span>خدمات</span></div>
+        <div class="menu-item p-3"><span>پروژه ها</span></div>
+        <div class="menu-item p-3"><span>وبلاگ</span></div>
+        <div class="menu-item p-3"><span>درباره ما</span></div>
+      </div>
+    </nav>
   </body>
 </html>
+
+<!-- <nav>
+    {{ logo }}
+    <a href="./">فارسی</a>
+    <a href="#en">English</a>
+    <a href="#ar">عربي</a>
+  </nav> -->
+
+<!-- Button trigger modal -->
+<!-- <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+  >
+    {{ buttonText }}
+  </button> -->
+
+<!-- Modal -->
+<!-- <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{ modalTitle }}</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            {{# products }}
+            <li>{{ name }} <span>({{ price }})</span></li>
+            {{/ products }}
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            {{ modalItems.close }}
+          </button>
+          <button type="button" class="btn btn-primary">
+            {{ modalItems.submit }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills">
+    {{# resume.skills }}
+    <div>
+      <div style="width: {{ score }}%; background-color: {{ color }};">
+        {{ name }}
+      </div>
+    </div>
+    {{/ resume.skills }}
+  </div>
+
+  <footer>
+    <ul>
+      {{# social }}
+      <a href="{{ link }}">{{ name }}</a>
+      {{/ social }}
+    </ul>
+  </footer> -->
